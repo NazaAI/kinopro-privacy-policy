@@ -6,42 +6,66 @@
 <title>Privacy Policy — KinoPro</title>
 <style>
   :root {
-    --bg: #f7f7f9;
-    --card-bg: #ffffff;
-    --text: #1c1c1e;
-    --text-muted: #55555a;
-    --heading: #111113;
+    --bg-top: #0f0c29;
+    --bg-mid: #302b63;
+    --bg-bottom: #24243e;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --text: #e8e8f0;
+    --text-muted: #b8b8c8;
+    --heading: #ffffff;
     --accent: #e50914;
-    --border: #e5e5ea;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f0f12;
-      --card-bg: #1a1a1e;
-      --text: #e8e8ea;
-      --text-muted: #a3a3aa;
-      --heading: #ffffff;
-      --accent: #ff4b57;
-      --border: #2c2c31;
-    }
+    --accent-soft: #ff4b57;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     padding: 0;
-    background: var(--bg);
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 55%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
   }
   .wrap {
     max-width: 720px;
     margin: 0 auto;
-    padding: 48px 20px 80px;
+    padding: 48px 20px 120px;
   }
   header {
     margin-bottom: 40px;
   }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(229, 9, 20, 0.35);
+    flex-shrink: 0;
+  }
+  .brand-mark span {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .brand-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+  }
+  .brand-name .kino { color: #ffffff; }
+  .brand-name .pro { color: var(--accent-soft); }
   h1 {
     font-size: 28px;
     font-weight: 800;
@@ -54,9 +78,11 @@
   }
   .card {
     background: var(--card-bg);
-    border: 1px solid var(--border);
+    border: 1px solid var(--card-border);
     border-radius: 16px;
     padding: 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   h2 {
     font-size: 18px;
@@ -72,7 +98,7 @@
     color: var(--text);
   }
   a {
-    color: var(--accent);
+    color: var(--accent-soft);
     text-decoration: none;
   }
   a:hover {
@@ -87,11 +113,82 @@
     font-size: 13px;
     margin-top: 32px;
   }
+
+  /* Cookie / privacy consent banner */
+  #consent-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: none;
+    background: rgba(15, 12, 41, 0.92);
+    border-top: 1px solid var(--card-border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35);
+  }
+  #consent-banner.visible {
+    display: block;
+  }
+  .consent-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .consent-text {
+    flex: 1 1 380px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .consent-text a {
+    color: var(--accent-soft);
+  }
+  .consent-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .consent-actions button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: opacity 0.15s ease;
+  }
+  .consent-actions button:hover {
+    opacity: 0.85;
+  }
+  #consent-accept {
+    background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+    color: #ffffff;
+  }
+  #consent-reject {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--card-border);
+  }
+  @media (max-width: 520px) {
+    .consent-inner { flex-direction: column; align-items: stretch; }
+    .consent-actions { justify-content: flex-end; }
+  }
 </style>
 </head>
 <body>
   <div class="wrap">
     <header>
+      <div class="brand">
+        <div class="brand-mark"><span>K</span></div>
+        <div class="brand-name"><span class="kino">Kino</span><span class="pro">Pro</span></div>
+      </div>
       <h1>Privacy Policy for KinoPro</h1>
       <div class="updated">Last updated: July 30, 2026</div>
     </header>
@@ -131,5 +228,53 @@
 
     <footer>KinoPro — Your Personal Cinema</footer>
   </div>
+
+  <div id="consent-banner">
+    <div class="consent-inner">
+      <p class="consent-text">
+        We use local storage on this site for basic functionality, such as remembering your cookie preference. See our
+        <a href="#top">Privacy Policy</a> for details.
+      </p>
+      <div class="consent-actions">
+        <button id="consent-reject" type="button">Reject</button>
+        <button id="consent-accept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'kinopro-consent';
+      var banner = document.getElementById('consent-banner');
+
+      function hasChoice() {
+        try {
+          return localStorage.getItem(STORAGE_KEY) !== null;
+        } catch (e) {
+          return true; // localStorage unavailable — don't keep prompting
+        }
+      }
+
+      function saveChoice(value) {
+        try {
+          localStorage.setItem(STORAGE_KEY, value);
+        } catch (e) {
+          /* ignore */
+        }
+        banner.classList.remove('visible');
+      }
+
+      if (!hasChoice()) {
+        banner.classList.add('visible');
+      }
+
+      document.getElementById('consent-accept').addEventListener('click', function () {
+        saveChoice('accepted');
+      });
+      document.getElementById('consent-reject').addEventListener('click', function () {
+        saveChoice('rejected');
+      });
+    })();
+  </script>
 </body>
 </html>
