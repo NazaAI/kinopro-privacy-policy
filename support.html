@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — KinoPro</title>
+<style>
+  :root {
+    --bg-top: #0f0c29;
+    --bg-mid: #302b63;
+    --bg-bottom: #24243e;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --text: #e8e8f0;
+    --text-muted: #b8b8c8;
+    --heading: #ffffff;
+    --accent: #e50914;
+    --accent-soft: #ff4b57;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 55%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 120px;
+  }
+  header { margin-bottom: 40px; }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(229, 9, 20, 0.35);
+    flex-shrink: 0;
+  }
+  .brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .brand-name { font-size: 22px; font-weight: 800; letter-spacing: 0.2px; }
+  .brand-name .kino { color: #ffffff; }
+  .brand-name .pro { color: var(--accent-soft); }
+  h1 { font-size: 28px; font-weight: 800; color: var(--heading); margin: 0 0 8px; }
+  .subtitle { color: var(--text-muted); font-size: 15px; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .contact-card {
+    background: rgba(229, 9, 20, 0.12);
+    border: 1px solid rgba(255, 75, 87, 0.4);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .contact-card .label { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-card a { font-size: 20px; font-weight: 700; }
+  h2 { font-size: 17px; font-weight: 700; color: var(--heading); margin: 28px 0 8px; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 12px; color: var(--text); }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent-soft); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: var(--heading); }
+  footer { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 32px; }
+  .links { text-align: center; margin-top: 20px; font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brand-mark"><img src="logo.png" alt="KinoPro logo"></div>
+        <div class="brand-name"><span class="kino">Kino</span><span class="pro">Pro</span></div>
+      </div>
+      <h1>Support</h1>
+      <div class="subtitle">Questions, problems, or feedback about KinoPro — we read every message.</div>
+    </header>
+
+    <div class="contact-card">
+      <div class="label">Contact us</div>
+      <a href="mailto:eistudios.apps@gmail.com">eistudios.apps@gmail.com</a>
+      <p style="margin-top:8px;color:var(--text-muted);font-size:13px;">We usually reply within 2–3 business days.</p>
+    </div>
+
+    <div class="card">
+      <h2>I didn't get the confirmation or password reset email</h2>
+      <p>Check your spam folder first — new senders often land there. Password reset emails are only sent to addresses that already have an account, so if nothing arrives, make sure you registered with that exact address. If it still doesn't show up after a few minutes, email us and we'll look into it.</p>
+
+      <h2>How do I cancel PRO+?</h2>
+      <p>Open <strong>Settings &rarr; Apple Account &rarr; Subscriptions</strong> on your device and cancel there, or use the "Manage Subscription" button inside the app. Cancelling stops future renewals — it is not a refund, and PRO+ stays active until the end of the period you already paid for.</p>
+
+      <h2>I want a refund</h2>
+      <p>All payments go through Apple, so refunds are handled by Apple and follow their policies. We never receive your payment directly and cannot issue one ourselves. Request a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> using the Apple Account you purchased with.</p>
+
+      <h2>I paid but PRO+ isn't active</h2>
+      <p>Open the app, go to <strong>Profile</strong> and tap <strong>Restore Purchases</strong>. This also brings PRO+ back after reinstalling the app or moving to a new device — as long as you use the same Apple Account. If it still doesn't activate, email us and include the date of purchase.</p>
+
+      <h2>What are tokens, and why did they run out?</h2>
+      <p>Tokens power AI features such as Mood Radar and Cinema Radar. They refill automatically over time, and PRO+ gives you a larger pool that refills faster. You can also top up at any time with a credits pack from your Profile.</p>
+
+      <h2>A film is missing, or the streaming info is wrong</h2>
+      <p>Film and TV data — including where a title is available to stream — comes from The Movie Database (TMDB) and its partners. It can be incomplete or differ by region, and we cannot edit it directly. KinoPro is a discovery app: it does not host or stream any films itself.</p>
+
+      <h2>How do I delete my account?</h2>
+      <p>Open <strong>Profile &rarr; Delete Account</strong> in the app. This permanently removes your account and cannot be undone. Note that deleting your account does <strong>not</strong> cancel an active subscription — subscriptions belong to your Apple Account and must be cancelled separately, as described above.</p>
+
+      <div class="links">
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+
+    <footer>KinoPro — Your Personal Cinema</footer>
+  </div>
+</body>
+</html>
